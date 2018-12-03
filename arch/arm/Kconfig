@@ -1358,6 +1358,8 @@ source "board/zipitz2/Kconfig"
 
 source "arch/arm/Kconfig.debug"
 
+source "board/cmi_at151/Kconfig"
+
 endmenu
 
 config SPL_LDSCRIPT

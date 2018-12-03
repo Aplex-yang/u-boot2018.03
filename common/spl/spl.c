@@ -357,7 +357,10 @@ static int boot_from_devices(struct spl_image_info *spl_image,
 			puts("SPL: Unsupported Boot Device!\n");
 #endif
 		if (loader && !spl_load_image(spl_image, loader))
+		{
+			*(uint *)0x80000000 = loader->boot_device;
 			return 0;
+		}
 	}
 
 	return -ENODEV;

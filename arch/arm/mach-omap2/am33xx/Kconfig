@@ -67,6 +67,13 @@ config TARGET_AM335X_BALTOS
 	select DM
 	select DM_SERIAL
 	select DM_GPIO
+config TARGET_AM335X_CMI_AT151
+    bool "Support am335x_cmi_at151"
+	select CPU_V7
+	select SUPPORT_SPL
+	select DM
+	select DM_SERIAL
+	select DM_GPIO
 
 config TARGET_AM335X_IGEP003X
 	bool "Support am335x_igep003x"
