@@ -19,6 +19,8 @@
 #include <linux/sizes.h>
 #include <configs/ti_am335x_common.h>
 
+
+
 #define CONFIG_MACH_TYPE		MACH_TYPE_AM335XEVM
 
 /* Clock Defines */
@@ -52,21 +54,20 @@
 	"mtdparts=" CONFIG_MTDPARTS_DEFAULT "\0" \
 	"nandargs=setenv bootargs console=${console} " \
 		"${optargs} " \
-		"${mtdparts} " \
 		"root=${nandroot} " \
 		"rootfstype=${nandrootfstype}\0" \
-	"nandroot=ubi0:rootfs rw ubi.mtd=5\0" \
+	"nandroot=ubi0:rootfs rw ubi.mtd=4,2048\0" \
 	"nandrootfstype=ubifs rootwait=1\0" \
 	"nandboot=echo Booting from nand ...; " \
 		"run nandargs; " \
-		"setenv loadaddr 0x84000000; " \
-		"ubi part UBI; " \
-		"ubifsmount ubi0:kernel; " \
-		"ubifsload $loadaddr kernel-fit.itb;" \
-		"ubifsumount; " \
-		"bootm ${loadaddr}#conf${board_name}; " \
-		"if test $? -ne 0; then echo Using default FIT config; " \
-		"bootm ${loadaddr}; fi;\0"
+        "nandecc hw 8; "\
+		"setenv loadaddr 0x82000000; " \
+        "setenv fdtaddr 0x88000000; "\
+        "nandecc hw 8; "\
+        "nand read ${loadaddr} 0x280000 0x500000; "\
+        "nandecc hw 8; "\
+        "nand read ${fdtaddr} 0x700000 0x20000; "\
+		"bootz ${loadaddr} - ${fdtaddr} ;\0"
 #else
 #define NANDARGS ""
 #endif
@@ -88,9 +89,7 @@
 	"optargs=\0" \
 	"mmcdev=0\0" \
 	"mmcroot=/dev/mmcblk0p2 ro\0" \
-	"usbroot=/dev/sda2 ro\0" \
 	"mmcrootfstype=ext4 rootwait\0" \
-	"usbrootfstype=ext4 rootwait\0" \
 	"rootpath=/export/rootfs\0" \
 	"nfsopts=nolock\0" \
 	"static_ip=${ipaddr}:${serverip}:${gatewayip}:${netmask}:${hostname}" \
@@ -102,11 +101,6 @@
 		"${mtdparts} " \
 		"root=${mmcroot} " \
 		"rootfstype=${mmcrootfstype}\0" \
-	"usbargs=setenv bootargs console=${console} " \
-		"${optargs} " \
-		"${mtdparts} " \
-		"root=${usbroot} " \
-		"rootfstype=${usbrootfstype}\0" \
 	"spiroot=/dev/mtdblock4 rw\0" \
 	"spirootfstype=jffs2\0" \
 	"spisrcaddr=0xe0000\0" \
@@ -123,10 +117,7 @@
 		"ip=dhcp\0" \
 	"bootenv=uEnv.txt\0" \
 	"loadbootenv=load mmc ${mmcdev} ${loadaddr} ${bootenv}\0" \
-	"usbloadbootenv=load usb 0:1 ${loadaddr} ${bootenv}\0" \
 	"importbootenv=echo Importing environment from mmc ...; " \
-		"env import -t $loadaddr $filesize\0" \
-	"usbimportbootenv=echo Importing environment from USB ...; " \
 		"env import -t $loadaddr $filesize\0" \
 	"ramargs=setenv bootargs console=${console} " \
 		"${optargs} " \
@@ -134,14 +125,7 @@
 		"rootfstype=${ramrootfstype}\0" \
 	"loadramdisk=load mmc ${mmcdev} ${rdaddr} ramdisk.gz\0" \
 	"loadimage=load mmc ${bootpart} ${loadaddr} ${bootdir}/${bootfile}\0" \
-	"usbloadimage=load usb 0:1 ${loadaddr} kernel-fit.itb\0" \
 	"loadfdt=load mmc ${bootpart} ${fdtaddr} ${bootdir}/${fdtfile}\0" \
-	"usbloados=run usbargs; " \
-		"bootm ${loadaddr}#conf${board_name}; " \
-		"if test $? -ne 0; then " \
-			"echo Using default FIT configuration; " \
-			"bootm ${loadaddr}; " \
-		"fi;\0" \
 	"mmcloados=run mmcargs; " \
 		"if test ${boot_fdt} = yes || test ${boot_fdt} = try; then " \
 			"if run loadfdt; then " \
@@ -155,21 +139,6 @@
 			"fi; " \
 		"else " \
 			"bootz; " \
-		"fi;\0" \
-	"usbboot=usb reset; " \
-		"if usb storage; then " \
-			"echo USB drive found;" \
-			"if run usbloadbootenv; then " \
-				"echo Loaded environment from ${bootenv};" \
-				"run usbimportbootenv;" \
-			"fi;" \
-			"if test -n $uenvcmd; then " \
-				"echo Running uenvcmd ...;" \
-				"run uenvcmd;" \
-			"fi;" \
-			"if run usbloadimage; then " \
-				"run usbloados;" \
-			"fi;" \
 		"fi;\0" \
 	"mmcboot=mmc dev ${mmcdev}; " \
 		"if mmc rescan; then " \
@@ -201,7 +170,16 @@
 	"ramboot=echo Booting from ramdisk ...; " \
 		"run ramargs; " \
 		"bootz ${loadaddr} ${rdaddr} ${fdtaddr}\0" \
-	"findfdt=setenv fdtfile am335x-baltos.dtb\0" \
+	"findfdt=setenv fdtfile am335x-cmi_at151.dtb\0" \
+    "auto_update_nand= echo ------------------Begin update system to Nand -----------------;"\
+        "nand erase.chip ;mmc rescan;"\
+        "fatload mmc 0 81000000 MLO; nandecc hw 8; nand write.i 81000000 0 $filesize; "\
+        "fatload mmc 0 81000000 u-boot.img; nandecc hw 8; nand write.i 81000000 80000 $filesize; "\
+        "fatload mmc 0 81000000 zImage; nandecc hw 8; nand write.i 81000000 280000 ${filesize}; "\
+        "fatload mmc 0 81000000 am335x-cmi_at151.dtb; nandecc hw 8; nand write.i 81000000 700000 ${filesize}; "\
+        "fatload mmc 0 81000000 ubi.img; nandecc  hw 8;   nand write.i 81000000 780000 ${filesize};"\
+        "echo ;"\
+        "echo ------------------success update system to Nand -----------------;\0"\
 	NANDARGS
 	/*DFUARGS*/
 #endif
@@ -217,11 +195,11 @@
 
 /* NS16550 Configuration */
 #define CONFIG_SYS_NS16550_COM1		0x44e09000	/* Base EVM has UART0 */
-#define CONFIG_SYS_NS16550_COM2		0x48022000	/* UART1 */
-#define CONFIG_SYS_NS16550_COM3		0x48024000	/* UART2 */
-#define CONFIG_SYS_NS16550_COM4		0x481a6000	/* UART3 */
-#define CONFIG_SYS_NS16550_COM5		0x481a8000	/* UART4 */
-#define CONFIG_SYS_NS16550_COM6		0x481aa000	/* UART5 */
+#define CONFIG_SYS_NS16550_COM2		0x48022000  /* UART1 */
+#define CONFIG_SYS_NS16550_COM3		0x48024000  /* UART2 */
+#define CONFIG_SYS_NS16550_COM4		0x481a6000  /* UART3 */
+#define CONFIG_SYS_NS16550_COM5		0x481a8000  /* UART4 */
+#define CONFIG_SYS_NS16550_COM6		0x481aa000  /* UART5 */
 
 #define CONFIG_ENV_EEPROM_IS_ON_I2C
 #define CONFIG_SYS_I2C_EEPROM_ADDR	0x50	/* Main EEPROM */
