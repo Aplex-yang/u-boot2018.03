@@ -1197,66 +1197,18 @@ Discarded input sections
                 0x0000000000000000       0x1a drivers/built-in.o
  .text.eserial2_putc
                 0x0000000000000000        0x6 drivers/built-in.o
- .text.eserial3_putc
-                0x0000000000000000        0x6 drivers/built-in.o
- .text.eserial4_putc
-                0x0000000000000000        0x6 drivers/built-in.o
- .text.eserial5_putc
-                0x0000000000000000        0x6 drivers/built-in.o
- .text.eserial6_putc
-                0x0000000000000000        0x6 drivers/built-in.o
- .text.eserial2_puts
-                0x0000000000000000        0x6 drivers/built-in.o
- .text.eserial3_puts
-                0x0000000000000000        0x6 drivers/built-in.o
- .text.eserial4_puts
-                0x0000000000000000        0x6 drivers/built-in.o
- .text.eserial5_puts
-                0x0000000000000000        0x6 drivers/built-in.o
- .text.eserial6_puts
-                0x0000000000000000        0x6 drivers/built-in.o
- .text.eserial5_tstc
-                0x0000000000000000        0xc drivers/built-in.o
- .text.eserial6_getc
+ .text.eserial2_getc
                 0x0000000000000000       0x10 drivers/built-in.o
  .text.eserial2_setbrg
                 0x0000000000000000        0x6 drivers/built-in.o
- .text.eserial3_setbrg
-                0x0000000000000000        0x6 drivers/built-in.o
- .text.eserial4_setbrg
-                0x0000000000000000        0x6 drivers/built-in.o
- .text.eserial5_setbrg
-                0x0000000000000000        0x6 drivers/built-in.o
- .text.eserial6_setbrg
-                0x0000000000000000        0x6 drivers/built-in.o
  .text.eserial2_init
                 0x0000000000000000       0x24 drivers/built-in.o
- .text.eserial3_init
-                0x0000000000000000       0x24 drivers/built-in.o
- .text.eserial4_init
-                0x0000000000000000       0x24 drivers/built-in.o
- .text.eserial5_init
-                0x0000000000000000       0x24 drivers/built-in.o
- .text.eserial6_init
-                0x0000000000000000       0x24 drivers/built-in.o
- .text.eserial6_tstc
-                0x0000000000000000        0xc drivers/built-in.o
- .text.eserial2_getc
-                0x0000000000000000       0x10 drivers/built-in.o
  .text.eserial2_tstc
                 0x0000000000000000        0xc drivers/built-in.o
- .text.eserial3_getc
-                0x0000000000000000       0x10 drivers/built-in.o
- .text.eserial3_tstc
-                0x0000000000000000        0xc drivers/built-in.o
- .text.eserial4_getc
-                0x0000000000000000       0x10 drivers/built-in.o
- .text.eserial4_tstc
-                0x0000000000000000        0xc drivers/built-in.o
- .text.eserial5_getc
-                0x0000000000000000       0x10 drivers/built-in.o
+ .text.eserial2_puts
+                0x0000000000000000       0x14 drivers/built-in.o
  .text.ns16550_serial_initialize
-                0x0000000000000000       0x44 drivers/built-in.o
+                0x0000000000000000       0x1c drivers/built-in.o
  .text.gpio_set_value
                 0x0000000000000000       0x3c drivers/built-in.o
  .text.gpio_free
@@ -1494,14 +1446,6 @@ Discarded input sections
  .data.nand_oob_8
                 0x0000000000000000      0xba8 drivers/built-in.o
  .data.eserial2_device
-                0x0000000000000000       0x30 drivers/built-in.o
- .data.eserial3_device
-                0x0000000000000000       0x30 drivers/built-in.o
- .data.eserial4_device
-                0x0000000000000000       0x30 drivers/built-in.o
- .data.eserial5_device
-                0x0000000000000000       0x30 drivers/built-in.o
- .data.eserial6_device
                 0x0000000000000000       0x30 drivers/built-in.o
  .data.mtd_partitions
                 0x0000000000000000        0x8 drivers/built-in.o
@@ -1789,7 +1733,7 @@ Name             Origin             Length             Attributes
 Linker script and memory map
 
 
-.text           0x00000000402f0400     0x927c
+.text           0x00000000402f0400     0x9274
                 0x00000000402f0400                __start = .
  *(.vectors)
  .vectors       0x00000000402f0400       0x44 arch/arm/lib/built-in.o
@@ -2508,613 +2452,611 @@ Linker script and memory map
                 0x00000000402f73d4       0x2c drivers/built-in.o
  .text.eserial1_putc
                 0x00000000402f7400        0x6 drivers/built-in.o
- .text._serial_puts
-                0x00000000402f7406       0x16 drivers/built-in.o
  .text.eserial1_puts
-                0x00000000402f741c        0x6 drivers/built-in.o
- *fill*         0x00000000402f7422        0x2 
- .text._serial_setbrg
-                0x00000000402f7424       0x2c drivers/built-in.o
- .text.eserial1_setbrg
-                0x00000000402f7450        0x6 drivers/built-in.o
- *fill*         0x00000000402f7456        0x2 
- .text.eserial1_init
-                0x00000000402f7458       0x24 drivers/built-in.o
- .text.eserial1_getc
-                0x00000000402f747c       0x10 drivers/built-in.o
+                0x00000000402f7406       0x14 drivers/built-in.o
+ *fill*         0x00000000402f741a        0x2 
  .text.eserial1_tstc
-                0x00000000402f748c        0xc drivers/built-in.o
+                0x00000000402f741c        0xc drivers/built-in.o
+ .text._serial_setbrg
+                0x00000000402f7428       0x2c drivers/built-in.o
+ .text.eserial1_setbrg
+                0x00000000402f7454        0x6 drivers/built-in.o
+ *fill*         0x00000000402f745a        0x2 
+ .text.eserial1_init
+                0x00000000402f745c       0x24 drivers/built-in.o
+ .text.eserial1_getc
+                0x00000000402f7480       0x10 drivers/built-in.o
  .text.default_serial_console
-                0x00000000402f7498        0x8 drivers/built-in.o
-                0x00000000402f7498                default_serial_console
+                0x00000000402f7490        0x8 drivers/built-in.o
+                0x00000000402f7490                default_serial_console
  .text.ns16550_calc_divisor
-                0x00000000402f74a0       0x10 drivers/built-in.o
-                0x00000000402f74a0                ns16550_calc_divisor
+                0x00000000402f7498       0x10 drivers/built-in.o
+                0x00000000402f7498                ns16550_calc_divisor
  .text.NS16550_init
-                0x00000000402f74b0       0x5c drivers/built-in.o
-                0x00000000402f74b0                NS16550_init
+                0x00000000402f74a8       0x5c drivers/built-in.o
+                0x00000000402f74a8                NS16550_init
  .text.NS16550_reinit
-                0x00000000402f750c       0x54 drivers/built-in.o
-                0x00000000402f750c                NS16550_reinit
+                0x00000000402f7504       0x54 drivers/built-in.o
+                0x00000000402f7504                NS16550_reinit
  .text.NS16550_putc
-                0x00000000402f7560       0x1c drivers/built-in.o
-                0x00000000402f7560                NS16550_putc
+                0x00000000402f7558       0x1c drivers/built-in.o
+                0x00000000402f7558                NS16550_putc
  .text.NS16550_getc
-                0x00000000402f757c       0x20 drivers/built-in.o
-                0x00000000402f757c                NS16550_getc
+                0x00000000402f7574       0x20 drivers/built-in.o
+                0x00000000402f7574                NS16550_getc
  .text.NS16550_tstc
-                0x00000000402f759c        0xe drivers/built-in.o
-                0x00000000402f759c                NS16550_tstc
- *fill*         0x00000000402f75aa        0x2 
+                0x00000000402f7594        0xe drivers/built-in.o
+                0x00000000402f7594                NS16550_tstc
+ *fill*         0x00000000402f75a2        0x2 
  .text.check_gpio
-                0x00000000402f75ac       0x1c drivers/built-in.o
+                0x00000000402f75a4       0x1c drivers/built-in.o
  .text.gpio_is_valid
-                0x00000000402f75c8        0xa drivers/built-in.o
-                0x00000000402f75c8                gpio_is_valid
- *fill*         0x00000000402f75d2        0x2 
+                0x00000000402f75c0        0xa drivers/built-in.o
+                0x00000000402f75c0                gpio_is_valid
+ *fill*         0x00000000402f75ca        0x2 
  .text.gpio_get_value
-                0x00000000402f75d4       0x44 drivers/built-in.o
-                0x00000000402f75d4                gpio_get_value
+                0x00000000402f75cc       0x44 drivers/built-in.o
+                0x00000000402f75cc                gpio_get_value
  .text.gpio_direction_input
-                0x00000000402f7618       0x38 drivers/built-in.o
-                0x00000000402f7618                gpio_direction_input
+                0x00000000402f7610       0x38 drivers/built-in.o
+                0x00000000402f7610                gpio_direction_input
  .text.gpio_direction_output
-                0x00000000402f7650       0x48 drivers/built-in.o
-                0x00000000402f7650                gpio_direction_output
+                0x00000000402f7648       0x48 drivers/built-in.o
+                0x00000000402f7648                gpio_direction_output
  .text.gpio_request
-                0x00000000402f7698        0xa drivers/built-in.o
-                0x00000000402f7698                gpio_request
+                0x00000000402f7690        0xa drivers/built-in.o
+                0x00000000402f7690                gpio_request
  .text.tps65910_set_i2c_control
-                0x00000000402f76a2       0x36 drivers/built-in.o
-                0x00000000402f76a2                tps65910_set_i2c_control
+                0x00000000402f769a       0x36 drivers/built-in.o
+                0x00000000402f769a                tps65910_set_i2c_control
  .text.tps65910_voltage_update
-                0x00000000402f76d8       0x94 drivers/built-in.o
-                0x00000000402f76d8                tps65910_voltage_update
+                0x00000000402f76d0       0x94 drivers/built-in.o
+                0x00000000402f76d0                tps65910_voltage_update
  .text.hw_watchdog_reset
-                0x00000000402f776c       0x24 drivers/built-in.o
-                0x00000000402f776c                hw_watchdog_reset
+                0x00000000402f7764       0x24 drivers/built-in.o
+                0x00000000402f7764                hw_watchdog_reset
  .text.hw_watchdog_disable
-                0x00000000402f7790       0x30 drivers/built-in.o
-                0x00000000402f7790                hw_watchdog_disable
+                0x00000000402f7788       0x30 drivers/built-in.o
+                0x00000000402f7788                hw_watchdog_disable
  .text.hw_watchdog_init
-                0x00000000402f77c0       0x74 drivers/built-in.o
-                0x00000000402f77c0                hw_watchdog_init
+                0x00000000402f77b8       0x74 drivers/built-in.o
+                0x00000000402f77b8                hw_watchdog_init
  .text.blk_driver_lookup_type
-                0x00000000402f7834       0x20 drivers/built-in.o
-                0x00000000402f7834                blk_driver_lookup_type
+                0x00000000402f782c       0x20 drivers/built-in.o
+                0x00000000402f782c                blk_driver_lookup_type
  .text.blk_dselect_hwpart
-                0x00000000402f7854       0x26 drivers/built-in.o
-                0x00000000402f7854                blk_dselect_hwpart
- *fill*         0x00000000402f787a        0x2 
+                0x00000000402f784c       0x26 drivers/built-in.o
+                0x00000000402f784c                blk_dselect_hwpart
+ *fill*         0x00000000402f7872        0x2 
  .text.downcase
-                0x00000000402f787c       0x24 fs/built-in.o
+                0x00000000402f7874       0x24 fs/built-in.o
  .text.disk_read
-                0x00000000402f78a0       0x30 fs/built-in.o
- .text.mkcksum  0x00000000402f78d0       0x36 fs/built-in.o
- *fill*         0x00000000402f7906        0x2 
+                0x00000000402f7898       0x30 fs/built-in.o
+ .text.mkcksum  0x00000000402f78c8       0x36 fs/built-in.o
+ *fill*         0x00000000402f78fe        0x2 
  .text.disk_write
-                0x00000000402f7908       0x50 fs/built-in.o
+                0x00000000402f7900       0x50 fs/built-in.o
  .text.flush_dirty_fat_buffer
-                0x00000000402f7958       0x60 fs/built-in.o
+                0x00000000402f7950       0x60 fs/built-in.o
  .text.get_fatent
-                0x00000000402f79b8       0xf8 fs/built-in.o
+                0x00000000402f79b0       0xf8 fs/built-in.o
  .text.next_dent
-                0x00000000402f7ab0       0xac fs/built-in.o
+                0x00000000402f7aa8       0xac fs/built-in.o
  .text.get_name
-                0x00000000402f7b5c       0x8a fs/built-in.o
- *fill*         0x00000000402f7be6        0x2 
+                0x00000000402f7b54       0x8a fs/built-in.o
+ *fill*         0x00000000402f7bde        0x2 
  .text.get_cluster
-                0x00000000402f7be8       0xf4 fs/built-in.o
+                0x00000000402f7be0       0xf4 fs/built-in.o
  .text.read_bootsectandvi
-                0x00000000402f7cdc       0xbc fs/built-in.o
+                0x00000000402f7cd4       0xbc fs/built-in.o
  .text.fat_itr_root
-                0x00000000402f7d98       0xec fs/built-in.o
+                0x00000000402f7d90       0xec fs/built-in.o
  .text.slot2str
-                0x00000000402f7e84       0x60 fs/built-in.o
+                0x00000000402f7e7c       0x60 fs/built-in.o
  .text.fat_itr_next
-                0x00000000402f7ee4       0xc2 fs/built-in.o
+                0x00000000402f7edc       0xc2 fs/built-in.o
  .text.fat_itr_resolve
-                0x00000000402f7fa6       0xe4 fs/built-in.o
- *fill*         0x00000000402f808a        0x2 
+                0x00000000402f7f9e       0xe4 fs/built-in.o
+ *fill*         0x00000000402f8082        0x2 
  .text.fat_set_blk_dev
-                0x00000000402f808c       0x8c fs/built-in.o
-                0x00000000402f808c                fat_set_blk_dev
+                0x00000000402f8084       0x8c fs/built-in.o
+                0x00000000402f8084                fat_set_blk_dev
  .text.fat_register_device
-                0x00000000402f8118       0x54 fs/built-in.o
-                0x00000000402f8118                fat_register_device
+                0x00000000402f8110       0x54 fs/built-in.o
+                0x00000000402f8110                fat_register_device
  .text.file_fat_read_at
-                0x00000000402f816c      0x2cc fs/built-in.o
-                0x00000000402f816c                file_fat_read_at
+                0x00000000402f8164      0x2cc fs/built-in.o
+                0x00000000402f8164                file_fat_read_at
  .text.file_fat_read
-                0x00000000402f8438       0x22 fs/built-in.o
-                0x00000000402f8438                file_fat_read
- *fill*         0x00000000402f845a        0x2 
- .text.get_fs   0x00000000402f845c        0x8 fs/built-in.o
-                0x00000000402f845c                get_fs
+                0x00000000402f8430       0x22 fs/built-in.o
+                0x00000000402f8430                file_fat_read
+ *fill*         0x00000000402f8452        0x2 
+ .text.get_fs   0x00000000402f8454        0x8 fs/built-in.o
+                0x00000000402f8454                get_fs
  .text.ext4fs_free_node
-                0x00000000402f8464       0x1c fs/built-in.o
-                0x00000000402f8464                ext4fs_free_node
+                0x00000000402f845c       0x1c fs/built-in.o
+                0x00000000402f845c                ext4fs_free_node
  .text.ext4fs_read_file
-                0x00000000402f8480      0x270 fs/built-in.o
-                0x00000000402f8480                ext4fs_read_file
+                0x00000000402f8478      0x270 fs/built-in.o
+                0x00000000402f8478                ext4fs_read_file
  .text.ext4fs_read
-                0x00000000402f86f0       0x38 fs/built-in.o
-                0x00000000402f86f0                ext4fs_read
+                0x00000000402f86e8       0x38 fs/built-in.o
+                0x00000000402f86e8                ext4fs_read
  .text.ext4fs_bg_get_inode_table_id
-                0x00000000402f8728       0x1a fs/built-in.o
-                0x00000000402f8728                ext4fs_bg_get_inode_table_id
+                0x00000000402f8720       0x1a fs/built-in.o
+                0x00000000402f8720                ext4fs_bg_get_inode_table_id
  .text.ext4fs_read_inode
-                0x00000000402f8742       0xc6 fs/built-in.o
-                0x00000000402f8742                ext4fs_read_inode
+                0x00000000402f873a       0xc6 fs/built-in.o
+                0x00000000402f873a                ext4fs_read_inode
  .text.read_allocated_block
-                0x00000000402f8808      0x5e4 fs/built-in.o
-                0x00000000402f8808                read_allocated_block
+                0x00000000402f8800      0x5e4 fs/built-in.o
+                0x00000000402f8800                read_allocated_block
  .text.ext4fs_iterate_dir
-                0x00000000402f8dec      0x1f0 fs/built-in.o
-                0x00000000402f8dec                ext4fs_iterate_dir
+                0x00000000402f8de4      0x1f0 fs/built-in.o
+                0x00000000402f8de4                ext4fs_iterate_dir
  .text.ext4fs_find_file1
-                0x00000000402f8fdc      0x1b4 fs/built-in.o
+                0x00000000402f8fd4      0x1b4 fs/built-in.o
  .text.ext4fs_find_file
-                0x00000000402f9190       0x40 fs/built-in.o
-                0x00000000402f9190                ext4fs_find_file
+                0x00000000402f9188       0x40 fs/built-in.o
+                0x00000000402f9188                ext4fs_find_file
  .text.ext4fs_open
-                0x00000000402f91d0       0x64 fs/built-in.o
-                0x00000000402f91d0                ext4fs_open
+                0x00000000402f91c8       0x64 fs/built-in.o
+                0x00000000402f91c8                ext4fs_open
  .text.ext4fs_mount
-                0x00000000402f9234       0x90 fs/built-in.o
-                0x00000000402f9234                ext4fs_mount
+                0x00000000402f922c       0x90 fs/built-in.o
+                0x00000000402f922c                ext4fs_mount
  .text.ext4fs_set_blk_dev
-                0x00000000402f92c4       0x54 fs/built-in.o
-                0x00000000402f92c4                ext4fs_set_blk_dev
+                0x00000000402f92bc       0x54 fs/built-in.o
+                0x00000000402f92bc                ext4fs_set_blk_dev
  .text.ext4fs_devread
-                0x00000000402f9318       0x28 fs/built-in.o
-                0x00000000402f9318                ext4fs_devread
+                0x00000000402f9310       0x28 fs/built-in.o
+                0x00000000402f9310                ext4fs_devread
  .text.ext4_read_superblock
-                0x00000000402f9340       0x28 fs/built-in.o
-                0x00000000402f9340                ext4_read_superblock
+                0x00000000402f9338       0x28 fs/built-in.o
+                0x00000000402f9338                ext4_read_superblock
  .text.fs_devread
-                0x00000000402f9368      0x168 fs/built-in.o
-                0x00000000402f9368                fs_devread
+                0x00000000402f9360      0x168 fs/built-in.o
+                0x00000000402f9360                fs_devread
  .text.__udivsi3
-                0x00000000402f94d0       0x9c arch/arm/lib/lib.a(lib1funcs.o)
-                0x00000000402f94d0                __udivsi3
-                0x00000000402f94d0                __aeabi_uidiv
+                0x00000000402f94c8       0x9c arch/arm/lib/lib.a(lib1funcs.o)
+                0x00000000402f94c8                __udivsi3
+                0x00000000402f94c8                __aeabi_uidiv
  .text.__divsi3
-                0x00000000402f956c       0xcc arch/arm/lib/lib.a(lib1funcs.o)
-                0x00000000402f956c                __aeabi_idiv
-                0x00000000402f956c                __divsi3
+                0x00000000402f9564       0xcc arch/arm/lib/lib.a(lib1funcs.o)
+                0x00000000402f9564                __aeabi_idiv
+                0x00000000402f9564                __divsi3
  .text.__aeabi_uidivmod
-                0x00000000402f9638       0x30 arch/arm/lib/lib.a(lib1funcs.o)
-                0x00000000402f9638                __aeabi_uidivmod
-                0x00000000402f9650                __aeabi_idivmod
- .text.Ldiv0    0x00000000402f9668       0x10 arch/arm/lib/lib.a(lib1funcs.o)
- .text.__div0   0x00000000402f9678        0x4 arch/arm/lib/lib.a(div0.o)
-                0x00000000402f9678                __div0
+                0x00000000402f9630       0x30 arch/arm/lib/lib.a(lib1funcs.o)
+                0x00000000402f9630                __aeabi_uidivmod
+                0x00000000402f9648                __aeabi_idivmod
+ .text.Ldiv0    0x00000000402f9660       0x10 arch/arm/lib/lib.a(lib1funcs.o)
+ .text.__div0   0x00000000402f9670        0x4 arch/arm/lib/lib.a(div0.o)
+                0x00000000402f9670                __div0
 
-.glue_7         0x00000000402f967c        0x0
- .glue_7        0x00000000402f967c        0x0 linker stubs
+.glue_7         0x00000000402f9674        0x0
+ .glue_7        0x00000000402f9674        0x0 linker stubs
 
-.glue_7t        0x00000000402f967c        0x0
- .glue_7t       0x00000000402f967c        0x0 linker stubs
+.glue_7t        0x00000000402f9674        0x0
+ .glue_7t       0x00000000402f9674        0x0 linker stubs
 
-.vfp11_veneer   0x00000000402f967c        0x0
- .vfp11_veneer  0x00000000402f967c        0x0 linker stubs
+.vfp11_veneer   0x00000000402f9674        0x0
+ .vfp11_veneer  0x00000000402f9674        0x0 linker stubs
 
-.v4_bx          0x00000000402f967c        0x0
- .v4_bx         0x00000000402f967c        0x0 linker stubs
+.v4_bx          0x00000000402f9674        0x0
+ .v4_bx         0x00000000402f9674        0x0 linker stubs
 
-.iplt           0x00000000402f967c        0x0
- .iplt          0x00000000402f967c        0x0 arch/arm/cpu/armv7/start.o
-                0x00000000402f967c                . = ALIGN (0x4)
+.iplt           0x00000000402f9674        0x0
+ .iplt          0x00000000402f9674        0x0 arch/arm/cpu/armv7/start.o
+                0x00000000402f9674                . = ALIGN (0x4)
 
-.rodata         0x00000000402f967c     0x2cef
+.rodata         0x00000000402f9674     0x2c9f
  *(SORT(.rodata*))
- .rodata        0x00000000402f967c       0xa0 arch/arm/mach-omap2/built-in.o
+ .rodata        0x00000000402f9674       0xa0 arch/arm/mach-omap2/built-in.o
  .rodata.cmwkup
-                0x00000000402f971c        0x4 arch/arm/mach-omap2/built-in.o
-                0x00000000402f971c                cmwkup
+                0x00000000402f9714        0x4 arch/arm/mach-omap2/built-in.o
+                0x00000000402f9714                cmwkup
  .rodata.dpll_core_1000MHz
-                0x00000000402f9720       0x40 arch/arm/mach-omap2/built-in.o
-                0x00000000402f9720                dpll_core_1000MHz
+                0x00000000402f9718       0x40 arch/arm/mach-omap2/built-in.o
+                0x00000000402f9718                dpll_core_1000MHz
  .rodata.dpll_core_opp100
-                0x00000000402f9760       0x10 arch/arm/mach-omap2/built-in.o
-                0x00000000402f9760                dpll_core_opp100
+                0x00000000402f9758       0x10 arch/arm/mach-omap2/built-in.o
+                0x00000000402f9758                dpll_core_opp100
  .rodata.dpll_core_regs
-                0x00000000402f9770       0x24 arch/arm/mach-omap2/built-in.o
-                0x00000000402f9770                dpll_core_regs
+                0x00000000402f9768       0x24 arch/arm/mach-omap2/built-in.o
+                0x00000000402f9768                dpll_core_regs
  .rodata.dpll_ddr_regs
-                0x00000000402f9794       0x24 arch/arm/mach-omap2/built-in.o
-                0x00000000402f9794                dpll_ddr_regs
+                0x00000000402f978c       0x24 arch/arm/mach-omap2/built-in.o
+                0x00000000402f978c                dpll_ddr_regs
  .rodata.dpll_mpu_regs
-                0x00000000402f97b8       0x24 arch/arm/mach-omap2/built-in.o
-                0x00000000402f97b8                dpll_mpu_regs
+                0x00000000402f97b0       0x24 arch/arm/mach-omap2/built-in.o
+                0x00000000402f97b0                dpll_mpu_regs
  .rodata.dpll_per_192MHz
-                0x00000000402f97dc       0x40 arch/arm/mach-omap2/built-in.o
-                0x00000000402f97dc                dpll_per_192MHz
+                0x00000000402f97d4       0x40 arch/arm/mach-omap2/built-in.o
+                0x00000000402f97d4                dpll_per_192MHz
  .rodata.dpll_per_regs
-                0x00000000402f981c       0x24 arch/arm/mach-omap2/built-in.o
-                0x00000000402f981c                dpll_per_regs
+                0x00000000402f9814       0x24 arch/arm/mach-omap2/built-in.o
+                0x00000000402f9814                dpll_per_regs
  .rodata.ddr_cmd_reg
-                0x00000000402f9840        0x8 arch/arm/mach-omap2/built-in.o
+                0x00000000402f9838        0x8 arch/arm/mach-omap2/built-in.o
  .rodata.ddr_data_reg
-                0x00000000402f9848        0x8 arch/arm/mach-omap2/built-in.o
+                0x00000000402f9840        0x8 arch/arm/mach-omap2/built-in.o
  .rodata.emif_reg
-                0x00000000402f9850        0x8 arch/arm/mach-omap2/built-in.o
+                0x00000000402f9848        0x8 arch/arm/mach-omap2/built-in.o
  .rodata.vtpreg
-                0x00000000402f9858        0x8 arch/arm/mach-omap2/built-in.o
+                0x00000000402f9850        0x8 arch/arm/mach-omap2/built-in.o
  .rodata.am33xx_serial
-                0x00000000402f9860       0x78 arch/arm/mach-omap2/built-in.o
+                0x00000000402f9858       0x28 arch/arm/mach-omap2/built-in.o
  .rodata.gpio_bank_am33xx
-                0x00000000402f98d8       0x10 arch/arm/mach-omap2/built-in.o
+                0x00000000402f9880       0x10 arch/arm/mach-omap2/built-in.o
  .rodata.omap_gpio_bank
-                0x00000000402f98e8        0x4 arch/arm/mach-omap2/built-in.o
-                0x00000000402f98e8                omap_gpio_bank
+                0x00000000402f9890        0x4 arch/arm/mach-omap2/built-in.o
+                0x00000000402f9890                omap_gpio_bank
  .rodata.am33xx_ctrl
-                0x00000000402f98ec      0x1c8 arch/arm/mach-omap2/built-in.o
-                0x00000000402f98ec                am33xx_ctrl
+                0x00000000402f9894      0x1c8 arch/arm/mach-omap2/built-in.o
+                0x00000000402f9894                am33xx_ctrl
  .rodata.ddr3_sbc7109_cmd_ctrl_data
-                0x00000000402f9ab4       0x30 board/cmi_at151/built-in.o
+                0x00000000402f9a5c       0x30 board/cmi_at151/built-in.o
  .rodata.ddr3_sbc7109_data
-                0x00000000402f9ae4       0x18 board/cmi_at151/built-in.o
+                0x00000000402f9a8c       0x18 board/cmi_at151/built-in.o
  .rodata.dpll_ddr_baltos
-                0x00000000402f9afc       0x10 board/cmi_at151/built-in.o
-                0x00000000402f9afc                dpll_ddr_baltos
+                0x00000000402f9aa4       0x10 board/cmi_at151/built-in.o
+                0x00000000402f9aa4                dpll_ddr_baltos
  .rodata.ioregs_sbc7109
-                0x00000000402f9b0c       0x20 board/cmi_at151/built-in.o
-                0x00000000402f9b0c                ioregs_sbc7109
+                0x00000000402f9ab4       0x20 board/cmi_at151/built-in.o
+                0x00000000402f9ab4                ioregs_sbc7109
  .rodata.CSWTCH.32
-                0x00000000402f9b2c       0x20 common/built-in.o
+                0x00000000402f9ad4       0x20 common/built-in.o
  .rodata.crc_table
-                0x00000000402f9b4c      0x400 lib/built-in.o
+                0x00000000402f9af4      0x400 lib/built-in.o
  .rodata.CSWTCH.40
-                0x00000000402f9f4c       0x20 disk/built-in.o
- .rodata        0x00000000402f9f6c        0x8 drivers/built-in.o
+                0x00000000402f9ef4       0x20 disk/built-in.o
+ .rodata        0x00000000402f9f14        0x8 drivers/built-in.o
  .rodata.ext_csd_bus_width
-                0x00000000402f9f74       0x3c drivers/built-in.o
- .rodata.fbase  0x00000000402f9fb0       0x10 drivers/built-in.o
+                0x00000000402f9f1c       0x3c drivers/built-in.o
+ .rodata.fbase  0x00000000402f9f58       0x10 drivers/built-in.o
  .rodata.freqs.9608
-                0x00000000402f9fc0       0x34 drivers/built-in.o
+                0x00000000402f9f68       0x34 drivers/built-in.o
  .rodata.mmc_modes_by_pref
-                0x00000000402f9ff4       0x20 drivers/built-in.o
+                0x00000000402f9f9c       0x20 drivers/built-in.o
  .rodata.mmc_versions.9906
-                0x00000000402fa014       0x24 drivers/built-in.o
+                0x00000000402f9fbc       0x24 drivers/built-in.o
  .rodata.sd_modes_by_pref
-                0x00000000402fa038       0x10 drivers/built-in.o
+                0x00000000402f9fe0       0x10 drivers/built-in.o
  .rodata.omap_hsmmc_ops
-                0x00000000402fa048       0x14 drivers/built-in.o
+                0x00000000402f9ff0       0x14 drivers/built-in.o
  .rodata.nand_ecc_pos
-                0x00000000402fa05c       0xe0 drivers/built-in.o
+                0x00000000402fa004       0xe0 drivers/built-in.o
  .rodata.serial_ports
-                0x00000000402fa13c       0x18 drivers/built-in.o
+                0x00000000402fa0e4       0x18 drivers/built-in.o
  .rodata.crc16_tab
-                0x00000000402fa154      0x200 lib/built-in.o
+                0x00000000402fa0fc      0x200 lib/built-in.o
  .rodata.do_enable_clocks.str1.1
-                0x00000000402fa354       0x2a arch/arm/mach-omap2/built-in.o
+                0x00000000402fa2fc       0x2a arch/arm/mach-omap2/built-in.o
  .rodata.do_setup_dpll.str1.1
-                0x00000000402fa37e       0x3a arch/arm/mach-omap2/built-in.o
+                0x00000000402fa326       0x3a arch/arm/mach-omap2/built-in.o
  .rodata.str1.1
-                0x00000000402fa3b8       0x31 arch/arm/mach-omap2/built-in.o
+                0x00000000402fa360       0x31 arch/arm/mach-omap2/built-in.o
  .rodata.config_sdram_emif4d5.str1.1
-                0x00000000402fa3e9       0x2a arch/arm/mach-omap2/built-in.o
+                0x00000000402fa391       0x2a arch/arm/mach-omap2/built-in.o
  .rodata.am33xx_spl_board_init.str1.1
-                0x00000000402fa413       0x2f board/cmi_at151/built-in.o
+                0x00000000402fa3bb       0x2f board/cmi_at151/built-in.o
  .rodata.board_init_r.str1.1
-                0x00000000402fa442       0x62 common/spl/built-in.o
+                0x00000000402fa3ea       0x62 common/spl/built-in.o
  .rodata.preloader_console_init.str1.1
-                0x00000000402fa4a4       0x43 common/spl/built-in.o
+                0x00000000402fa44c       0x43 common/spl/built-in.o
  .rodata.spl_set_header_raw_uboot.str1.1
-                0x00000000402fa4e7        0x7 common/spl/built-in.o
+                0x00000000402fa48f        0x7 common/spl/built-in.o
  .rodata.spl_ymodem_load_image.str1.1
-                0x00000000402fa4ee       0x27 common/spl/built-in.o
+                0x00000000402fa496       0x27 common/spl/built-in.o
  .rodata.str1.1
-                0x00000000402fa515       0x1b common/spl/built-in.o
+                0x00000000402fa4bd       0x1b common/spl/built-in.o
  .rodata.spl_mmc_load_image.str1.1
-                0x00000000402fa530      0x116 common/spl/built-in.o
+                0x00000000402fa4d8      0x116 common/spl/built-in.o
  .rodata.__func__.7915
-                0x00000000402fa646       0x18 common/spl/built-in.o
+                0x00000000402fa5ee       0x18 common/spl/built-in.o
  .rodata.__func__.7935
-                0x00000000402fa65e       0x13 common/spl/built-in.o
+                0x00000000402fa606       0x13 common/spl/built-in.o
  .rodata.spl_load_image_fat.str1.1
-                0x00000000402fa671       0x41 common/spl/built-in.o
+                0x00000000402fa619       0x41 common/spl/built-in.o
  .rodata.__func__.7453
-                0x00000000402fa6b2       0x13 common/spl/built-in.o
+                0x00000000402fa65a       0x13 common/spl/built-in.o
  .rodata.spl_load_image_ext.str1.1
-                0x00000000402fa6c5       0x94 common/spl/built-in.o
+                0x00000000402fa66d       0x94 common/spl/built-in.o
                                          0xba (size before relaxing)
  .rodata.str1.1
-                0x00000000402fa759      0x6c7 common/built-in.o
+                0x00000000402fa701      0x6c7 common/built-in.o
                                         0x6f4 (size before relaxing)
  .rodata.xyzModem_error.str1.1
-                0x00000000402fae20        0xe common/built-in.o
+                0x00000000402fadc8        0xe common/built-in.o
  .rodata.xyzModem_stream_close.str1.1
-                0x00000000402fae2e       0x4b common/built-in.o
+                0x00000000402fadd6       0x4b common/built-in.o
  .rodata.xyzModem_stream_open.str1.1
-                0x00000000402fae79       0x4b common/built-in.o
+                0x00000000402fae21       0x4b common/built-in.o
                                           0x2 (size before relaxing)
- .rodata        0x00000000402fae79       0x20 lib/built-in.o
+ .rodata        0x00000000402fae21       0x20 lib/built-in.o
  .rodata._ctype
-                0x00000000402fae99      0x100 lib/built-in.o
-                0x00000000402fae99                _ctype
+                0x00000000402fae41      0x100 lib/built-in.o
+                0x00000000402fae41                _ctype
  .rodata.hang.str1.1
-                0x00000000402faf99       0x2a lib/built-in.o
+                0x00000000402faf41       0x2a lib/built-in.o
  .rodata.uuid_bin_to_str.str1.1
-                0x00000000402fafc3       0x2a lib/built-in.o
+                0x00000000402faf6b       0x2a lib/built-in.o
                                           0x5 (size before relaxing)
  .rodata.part_set_generic_name.str1.1
-                0x00000000402fafc3        0xa disk/built-in.o
+                0x00000000402faf6b        0xa disk/built-in.o
  .rodata.str1.1
-                0x00000000402fafcd       0x1f disk/built-in.o
+                0x00000000402faf75       0x1f disk/built-in.o
                                          0x22 (size before relaxing)
  .rodata.part_get_info_extended.str1.1
-                0x00000000402fafec        0xa disk/built-in.o
+                0x00000000402faf94        0xa disk/built-in.o
                                          0x11 (size before relaxing)
  .rodata.print_partition_extended.str1.1
-                0x00000000402faff6       0x83 disk/built-in.o
+                0x00000000402faf9e       0x83 disk/built-in.o
                                          0x84 (size before relaxing)
  .rodata.test_block_type.str1.1
-                0x00000000402fb079        0xa disk/built-in.o
+                0x00000000402fb021        0xa disk/built-in.o
  .rodata.part_get_info_iso_verb.str1.1
-                0x00000000402fb083      0x1bf disk/built-in.o
+                0x00000000402fb02b      0x1bf disk/built-in.o
                                         0x1c6 (size before relaxing)
  .rodata.part_print_iso.str1.1
-                0x00000000402fb242       0x68 disk/built-in.o
+                0x00000000402fb1ea       0x68 disk/built-in.o
  .rodata.__func__.8481
-                0x00000000402fb2aa       0x12 disk/built-in.o
+                0x00000000402fb252       0x12 disk/built-in.o
  .rodata.__func__.8623
-                0x00000000402fb2bc        0xd disk/built-in.o
+                0x00000000402fb264        0xd disk/built-in.o
  .rodata.__func__.8635
-                0x00000000402fb2c9       0x17 disk/built-in.o
+                0x00000000402fb271       0x17 disk/built-in.o
  .rodata.__func__.8640
-                0x00000000402fb2e0        0xd disk/built-in.o
+                0x00000000402fb288        0xd disk/built-in.o
  .rodata.is_gpt_valid.str1.1
-                0x00000000402fb2ed       0xea disk/built-in.o
+                0x00000000402fb295       0xea disk/built-in.o
  .rodata.part_get_info_efi.str1.1
-                0x00000000402fb3d7       0x6f disk/built-in.o
+                0x00000000402fb37f       0x6f disk/built-in.o
                                          0x76 (size before relaxing)
  .rodata.validate_gpt_entries.str1.1
-                0x00000000402fb446       0x40 disk/built-in.o
+                0x00000000402fb3ee       0x40 disk/built-in.o
  .rodata.validate_gpt_header.str1.1
-                0x00000000402fb486       0xe1 disk/built-in.o
+                0x00000000402fb42e       0xe1 disk/built-in.o
  .rodata.i2c_get_adapter.str1.1
-                0x00000000402fb567       0x2d drivers/built-in.o
+                0x00000000402fb50f       0x2d drivers/built-in.o
  .rodata.__func__.9730
-                0x00000000402fb594       0x14 drivers/built-in.o
+                0x00000000402fb53c       0x14 drivers/built-in.o
  .rodata.__omap24_i2c_setspeed.str1.1
-                0x00000000402fb5a8       0x4c drivers/built-in.o
+                0x00000000402fb550       0x4c drivers/built-in.o
  .rodata.omap24_get_base.isra.0.str1.1
-                0x00000000402fb5f4       0x14 drivers/built-in.o
+                0x00000000402fb59c       0x14 drivers/built-in.o
  .rodata.omap24_i2c_init.str1.1
-                0x00000000402fb608       0x45 drivers/built-in.o
+                0x00000000402fb5b0       0x45 drivers/built-in.o
  .rodata.omap24_i2c_probe.str1.1
-                0x00000000402fb64d       0x3e drivers/built-in.o
+                0x00000000402fb5f5       0x3e drivers/built-in.o
  .rodata.omap24_i2c_read.str1.1
-                0x00000000402fb68b      0x15c drivers/built-in.o
+                0x00000000402fb633      0x15c drivers/built-in.o
  .rodata.omap24_i2c_setspeed.str1.1
-                0x00000000402fb7e7       0x1a drivers/built-in.o
+                0x00000000402fb78f       0x1a drivers/built-in.o
  .rodata.omap24_i2c_write.str1.1
-                0x00000000402fb801      0x1d6 drivers/built-in.o
+                0x00000000402fb7a9      0x1d6 drivers/built-in.o
  .rodata.str1.1
-                0x00000000402fb9d7       0x1b drivers/built-in.o
+                0x00000000402fb97f       0x1b drivers/built-in.o
                                          0x1f (size before relaxing)
  .rodata.wait_for_bb.str1.1
-                0x00000000402fb9f2       0x27 drivers/built-in.o
+                0x00000000402fb99a       0x27 drivers/built-in.o
  .rodata.wait_for_event.str1.1
-                0x00000000402fba19       0x61 drivers/built-in.o
+                0x00000000402fb9c1       0x61 drivers/built-in.o
  .rodata.mmc_bread.str1.1
-                0x00000000402fba7a       0x47 drivers/built-in.o
+                0x00000000402fba22       0x47 drivers/built-in.o
  .rodata.mmc_send_status.str1.1
-                0x00000000402fbac1       0x32 drivers/built-in.o
+                0x00000000402fba69       0x32 drivers/built-in.o
  .rodata.mmc_start_init.str1.1
-                0x00000000402fbaf3       0x3f drivers/built-in.o
+                0x00000000402fba9b       0x3f drivers/built-in.o
  .rodata.mmc_startup.str1.1
-                0x00000000402fbb32       0x44 drivers/built-in.o
+                0x00000000402fbada       0x44 drivers/built-in.o
  .rodata.multipliers
-                0x00000000402fbb76       0x10 drivers/built-in.o
+                0x00000000402fbb1e       0x10 drivers/built-in.o
  .rodata.find_mmc_device.str1.1
-                0x00000000402fbb86       0x19 drivers/built-in.o
+                0x00000000402fbb2e       0x19 drivers/built-in.o
  .rodata.__func__.10548
-                0x00000000402fbb9f       0x10 drivers/built-in.o
+                0x00000000402fbb47       0x10 drivers/built-in.o
  .rodata.__func__.10588
-                0x00000000402fbbaf       0x16 drivers/built-in.o
+                0x00000000402fbb57       0x16 drivers/built-in.o
  .rodata.__func__.10650
-                0x00000000402fbbc5       0x19 drivers/built-in.o
+                0x00000000402fbb6d       0x19 drivers/built-in.o
  .rodata.__func__.10666
-                0x00000000402fbbde       0x14 drivers/built-in.o
+                0x00000000402fbb86       0x14 drivers/built-in.o
  .rodata.__func__.10714
-                0x00000000402fbbf2        0xe drivers/built-in.o
+                0x00000000402fbb9a        0xe drivers/built-in.o
  .rodata.__func__.10774
-                0x00000000402fbc00       0x15 drivers/built-in.o
+                0x00000000402fbba8       0x15 drivers/built-in.o
  .rodata.mmc_init_stream.str1.1
-                0x00000000402fbc15       0x3d drivers/built-in.o
+                0x00000000402fbbbd       0x3d drivers/built-in.o
  .rodata.mmc_reset_controller_fsm.str1.1
-                0x00000000402fbc52       0x2d drivers/built-in.o
+                0x00000000402fbbfa       0x2d drivers/built-in.o
  .rodata.omap_hsmmc_init_setup.str1.1
-                0x00000000402fbc7f       0x28 drivers/built-in.o
+                0x00000000402fbc27       0x28 drivers/built-in.o
  .rodata.omap_hsmmc_send_cmd.str1.1
-                0x00000000402fbca7       0x9d drivers/built-in.o
+                0x00000000402fbc4f       0x9d drivers/built-in.o
  .rodata.omap_hsmmc_set_ios.str1.1
-                0x00000000402fbd44       0x1f drivers/built-in.o
+                0x00000000402fbcec       0x1f drivers/built-in.o
  .rodata.omap_mmc_init.str1.1
-                0x00000000402fbd63       0x1a drivers/built-in.o
+                0x00000000402fbd0b       0x1a drivers/built-in.o
  .rodata.board_nand_init.str1.1
-                0x00000000402fbd7d       0x4c drivers/built-in.o
+                0x00000000402fbd25       0x4c drivers/built-in.o
  .rodata.omap_correct_data_bch.str1.1
-                0x00000000402fbdc9       0x28 drivers/built-in.o
+                0x00000000402fbd71       0x28 drivers/built-in.o
  .rodata.elm_check_error.str1.1
-                0x00000000402fbdf1       0x27 drivers/built-in.o
+                0x00000000402fbd99       0x27 drivers/built-in.o
  .rodata.get_current.str1.1
-                0x00000000402fbe18       0x15 drivers/built-in.o
+                0x00000000402fbdc0       0x15 drivers/built-in.o
  .rodata.check_gpio.str1.1
-                0x00000000402fbe2d       0x25 drivers/built-in.o
+                0x00000000402fbdd5       0x25 drivers/built-in.o
  .rodata.disk_write.str1.1
-                0x00000000402fbe52       0x18 fs/built-in.o
+                0x00000000402fbdfa       0x18 fs/built-in.o
  .rodata.do_fat_write.str1.1
-                0x00000000402fbe6a       0xd6 fs/built-in.o
+                0x00000000402fbe12       0xd6 fs/built-in.o
  .rodata.fat_itr_root.str1.1
-                0x00000000402fbf40       0x33 fs/built-in.o
+                0x00000000402fbee8       0x33 fs/built-in.o
  .rodata.fat_register_device.str1.1
-                0x00000000402fbf73       0x2b fs/built-in.o
+                0x00000000402fbf1b       0x2b fs/built-in.o
  .rodata.fat_set_blk_dev.str1.1
-                0x00000000402fbf9e        0x3 fs/built-in.o
+                0x00000000402fbf46        0x3 fs/built-in.o
                                           0xd (size before relaxing)
  .rodata.file_fat_read_at.str1.1
-                0x00000000402fbfa1       0x17 fs/built-in.o
+                0x00000000402fbf49       0x17 fs/built-in.o
  .rodata.get_cluster.str1.1
-                0x00000000402fbfb8       0x25 fs/built-in.o
+                0x00000000402fbf60       0x25 fs/built-in.o
  .rodata.get_fatent.str1.1
-                0x00000000402fbfdd       0x22 fs/built-in.o
+                0x00000000402fbf85       0x22 fs/built-in.o
  .rodata.read_bootsectandvi.str1.1
-                0x00000000402fbfff       0x1b fs/built-in.o
+                0x00000000402fbfa7       0x1b fs/built-in.o
  .rodata.ext4fs_iterate_dir.str1.1
-                0x00000000402fc01a       0x4a fs/built-in.o
+                0x00000000402fbfc2       0x4a fs/built-in.o
  .rodata.ext4fs_mount.str1.1
-                0x00000000402fc064       0x24 fs/built-in.o
+                0x00000000402fc00c       0x24 fs/built-in.o
  .rodata.read_allocated_block.str1.1
-                0x00000000402fc088      0x240 fs/built-in.o
+                0x00000000402fc030      0x240 fs/built-in.o
  .rodata.__func__.7159
-                0x00000000402fc2c8        0xb fs/built-in.o
+                0x00000000402fc270        0xb fs/built-in.o
  .rodata.fs_devread.str1.1
-                0x00000000402fc2d3       0x98 fs/built-in.o
+                0x00000000402fc27b       0x98 fs/built-in.o
 
-.rel.dyn        0x00000000402fc36c        0x0
- .rel.iplt      0x00000000402fc36c        0x0 arch/arm/cpu/armv7/start.o
-                0x00000000402fc36c                . = ALIGN (0x4)
+.rel.dyn        0x00000000402fc314        0x0
+ .rel.iplt      0x00000000402fc314        0x0 arch/arm/cpu/armv7/start.o
+                0x00000000402fc314                . = ALIGN (0x4)
 
-.data           0x00000000402fc370      0x7cd
+.data           0x00000000402fc318      0x7cd
  *(SORT(.data*))
- .data          0x00000000402fc370       0xd8 arch/arm/lib/built-in.o
-                0x00000000402fc370                gdata
+ .data          0x00000000402fc318       0xd8 arch/arm/lib/built-in.o
+                0x00000000402fc318                gdata
  .data.dpll_mpu_opp100
-                0x00000000402fc448       0x10 arch/arm/mach-omap2/built-in.o
-                0x00000000402fc448                dpll_mpu_opp100
- .data.cstat    0x00000000402fc458        0x4 arch/arm/mach-omap2/built-in.o
-                0x00000000402fc458                cstat
- .data.ctrl     0x00000000402fc45c        0x4 arch/arm/mach-omap2/built-in.o
-                0x00000000402fc45c                ctrl
+                0x00000000402fc3f0       0x10 arch/arm/mach-omap2/built-in.o
+                0x00000000402fc3f0                dpll_mpu_opp100
+ .data.cstat    0x00000000402fc400        0x4 arch/arm/mach-omap2/built-in.o
+                0x00000000402fc400                cstat
+ .data.ctrl     0x00000000402fc404        0x4 arch/arm/mach-omap2/built-in.o
+                0x00000000402fc404                ctrl
  .data.gpmc_cfg
-                0x00000000402fc460        0x4 arch/arm/mach-omap2/built-in.o
-                0x00000000402fc460                gpmc_cfg
+                0x00000000402fc408        0x4 arch/arm/mach-omap2/built-in.o
+                0x00000000402fc408                gpmc_cfg
  .data.gpio0_29_pin_mux
-                0x00000000402fc464       0x10 board/cmi_at151/built-in.o
+                0x00000000402fc40c       0x10 board/cmi_at151/built-in.o
  .data.i2c0_pin_mux
-                0x00000000402fc474       0x18 board/cmi_at151/built-in.o
+                0x00000000402fc41c       0x18 board/cmi_at151/built-in.o
  .data.i2c1_pin_mux
-                0x00000000402fc48c       0x18 board/cmi_at151/built-in.o
+                0x00000000402fc434       0x18 board/cmi_at151/built-in.o
  .data.mmc0_pin_mux
-                0x00000000402fc4a4       0x40 board/cmi_at151/built-in.o
+                0x00000000402fc44c       0x40 board/cmi_at151/built-in.o
  .data.nand_pin_mux
-                0x00000000402fc4e4       0x80 board/cmi_at151/built-in.o
+                0x00000000402fc48c       0x80 board/cmi_at151/built-in.o
  .data.rgmii1_pin_mux
-                0x00000000402fc564       0x78 board/cmi_at151/built-in.o
+                0x00000000402fc50c       0x78 board/cmi_at151/built-in.o
  .data.uart0_pin_mux
-                0x00000000402fc5dc       0x18 board/cmi_at151/built-in.o
+                0x00000000402fc584       0x18 board/cmi_at151/built-in.o
  .data.uart1_pin_mux
-                0x00000000402fc5f4       0x18 board/cmi_at151/built-in.o
+                0x00000000402fc59c       0x18 board/cmi_at151/built-in.o
  .data.ddr3_sbc7109_emif_reg_data
-                0x00000000402fc60c       0x7c board/cmi_at151/built-in.o
- .data          0x00000000402fc688       0x50 common/spl/built-in.o
- .data.av_      0x00000000402fc6d8      0x408 common/built-in.o
+                0x00000000402fc5b4       0x7c board/cmi_at151/built-in.o
+ .data          0x00000000402fc630       0x50 common/spl/built-in.o
+ .data.av_      0x00000000402fc680      0x408 common/built-in.o
  .data.sbrk_base
-                0x00000000402fcae0        0x4 common/built-in.o
+                0x00000000402fca88        0x4 common/built-in.o
  .data.trim_threshold
-                0x00000000402fcae4        0x4 common/built-in.o
+                0x00000000402fca8c        0x4 common/built-in.o
  .data.cur_dev_num
-                0x00000000402fcae8        0x4 drivers/built-in.o
+                0x00000000402fca90        0x4 drivers/built-in.o
  .data.eserial1_device
-                0x00000000402fcaec       0x30 drivers/built-in.o
-                0x00000000402fcaec                eserial1_device
+                0x00000000402fca94       0x30 drivers/built-in.o
+                0x00000000402fca94                eserial1_device
  .data.wdt_trgr_pattern
-                0x00000000402fcb1c        0x4 drivers/built-in.o
+                0x00000000402fcac4        0x4 drivers/built-in.o
  .data.ext4fs_indir1_blkno
-                0x00000000402fcb20        0x4 fs/built-in.o
-                0x00000000402fcb20                ext4fs_indir1_blkno
+                0x00000000402fcac8        0x4 fs/built-in.o
+                0x00000000402fcac8                ext4fs_indir1_blkno
  .data.ext4fs_indir2_blkno
-                0x00000000402fcb24        0x4 fs/built-in.o
-                0x00000000402fcb24                ext4fs_indir2_blkno
+                0x00000000402fcacc        0x4 fs/built-in.o
+                0x00000000402fcacc                ext4fs_indir2_blkno
  .data.ext4fs_indir3_blkno
-                0x00000000402fcb28        0x4 fs/built-in.o
-                0x00000000402fcb28                ext4fs_indir3_blkno
+                0x00000000402fcad0        0x4 fs/built-in.o
+                0x00000000402fcad0                ext4fs_indir3_blkno
  .data.gpmc_cs0_flash
-                0x00000000402fcb2c        0x1 arch/arm/mach-omap2/built-in.o
-                0x00000000402fcb2c                gpmc_cs0_flash
+                0x00000000402fcad4        0x1 arch/arm/mach-omap2/built-in.o
+                0x00000000402fcad4                gpmc_cs0_flash
  .data.system_guid
-                0x00000000402fcb2d       0x10 disk/built-in.o
+                0x00000000402fcad5       0x10 disk/built-in.o
 
-.igot.plt       0x00000000402fcb40        0x0
- .igot.plt      0x00000000402fcb40        0x0 arch/arm/cpu/armv7/start.o
-                0x00000000402fcb40                . = ALIGN (0x4)
+.igot.plt       0x00000000402fcae8        0x0
+ .igot.plt      0x00000000402fcae8        0x0 arch/arm/cpu/armv7/start.o
+                0x00000000402fcae8                . = ALIGN (0x4)
 
-.u_boot_list    0x00000000402fcb40      0x150
+.u_boot_list    0x00000000402fcae8      0x130
  *(SORT(.u_boot_list*))
  .u_boot_list_2_blk_driver_1
-                0x00000000402fcb40        0x0 drivers/built-in.o
+                0x00000000402fcae8        0x0 drivers/built-in.o
  .u_boot_list_2_blk_driver_2_mmc
-                0x00000000402fcb40       0x18 drivers/built-in.o
-                0x00000000402fcb40                _u_boot_list_2_blk_driver_2_mmc
+                0x00000000402fcae8       0x18 drivers/built-in.o
+                0x00000000402fcae8                _u_boot_list_2_blk_driver_2_mmc
  .u_boot_list_2_blk_driver_3
-                0x00000000402fcb58        0x0 drivers/built-in.o
+                0x00000000402fcb00        0x0 drivers/built-in.o
  .u_boot_list_2_cmd_1
-                0x00000000402fcb58        0x0 common/built-in.o
+                0x00000000402fcb00        0x0 common/built-in.o
  .u_boot_list_2_cmd_3
-                0x00000000402fcb58        0x0 common/built-in.o
+                0x00000000402fcb00        0x0 common/built-in.o
  .u_boot_list_2_driver_info_2_am33xx_uarts
-                0x00000000402fcb58       0x30 arch/arm/mach-omap2/built-in.o
-                0x00000000402fcb58                _u_boot_list_2_driver_info_2_am33xx_uarts
+                0x00000000402fcb00       0x10 arch/arm/mach-omap2/built-in.o
+                0x00000000402fcb00                _u_boot_list_2_driver_info_2_am33xx_uarts
  .u_boot_list_2_env_driver_1
-                0x00000000402fcb88        0x0 env/built-in.o
+                0x00000000402fcb10        0x0 env/built-in.o
  .u_boot_list_2_env_driver_3
-                0x00000000402fcb88        0x0 env/built-in.o
+                0x00000000402fcb10        0x0 env/built-in.o
  .u_boot_list_2_i2c_1
-                0x00000000402fcb88        0x0 drivers/built-in.o
+                0x00000000402fcb10        0x0 drivers/built-in.o
  .u_boot_list_2_i2c_2_omap24_0
-                0x00000000402fcb88       0x2c drivers/built-in.o
-                0x00000000402fcb88                _u_boot_list_2_i2c_2_omap24_0
+                0x00000000402fcb10       0x2c drivers/built-in.o
+                0x00000000402fcb10                _u_boot_list_2_i2c_2_omap24_0
  .u_boot_list_2_i2c_2_omap24_1
-                0x00000000402fcbb4       0x2c drivers/built-in.o
-                0x00000000402fcbb4                _u_boot_list_2_i2c_2_omap24_1
+                0x00000000402fcb3c       0x2c drivers/built-in.o
+                0x00000000402fcb3c                _u_boot_list_2_i2c_2_omap24_1
  .u_boot_list_2_i2c_2_omap24_2
-                0x00000000402fcbe0       0x2c drivers/built-in.o
-                0x00000000402fcbe0                _u_boot_list_2_i2c_2_omap24_2
+                0x00000000402fcb68       0x2c drivers/built-in.o
+                0x00000000402fcb68                _u_boot_list_2_i2c_2_omap24_2
  .u_boot_list_2_i2c_3
-                0x00000000402fcc0c        0x0 drivers/built-in.o
+                0x00000000402fcb94        0x0 drivers/built-in.o
  .u_boot_list_2_part_driver_1
-                0x00000000402fcc0c        0x0 disk/built-in.o
+                0x00000000402fcb94        0x0 disk/built-in.o
  .u_boot_list_2_part_driver_2_a_efi
-                0x00000000402fcc0c       0x18 disk/built-in.o
-                0x00000000402fcc0c                _u_boot_list_2_part_driver_2_a_efi
+                0x00000000402fcb94       0x18 disk/built-in.o
+                0x00000000402fcb94                _u_boot_list_2_part_driver_2_a_efi
  .u_boot_list_2_part_driver_2_dos
-                0x00000000402fcc24       0x18 disk/built-in.o
-                0x00000000402fcc24                _u_boot_list_2_part_driver_2_dos
+                0x00000000402fcbac       0x18 disk/built-in.o
+                0x00000000402fcbac                _u_boot_list_2_part_driver_2_dos
  .u_boot_list_2_part_driver_2_iso
-                0x00000000402fcc3c       0x18 disk/built-in.o
-                0x00000000402fcc3c                _u_boot_list_2_part_driver_2_iso
+                0x00000000402fcbc4       0x18 disk/built-in.o
+                0x00000000402fcbc4                _u_boot_list_2_part_driver_2_iso
  .u_boot_list_2_part_driver_3
-                0x00000000402fcc54        0x0 disk/built-in.o
+                0x00000000402fcbdc        0x0 disk/built-in.o
  .u_boot_list_2_spl_image_loader_1
-                0x00000000402fcc54        0x0 common/spl/built-in.o
+                0x00000000402fcbdc        0x0 common/spl/built-in.o
  .u_boot_list_2_spl_image_loader_2_spl_mmc_load_image0BOOT_DEVICE_MMC1
-                0x00000000402fcc54        0xc common/spl/built-in.o
-                0x00000000402fcc54                _u_boot_list_2_spl_image_loader_2_spl_mmc_load_image0BOOT_DEVICE_MMC1
+                0x00000000402fcbdc        0xc common/spl/built-in.o
+                0x00000000402fcbdc                _u_boot_list_2_spl_image_loader_2_spl_mmc_load_image0BOOT_DEVICE_MMC1
  .u_boot_list_2_spl_image_loader_2_spl_mmc_load_image0BOOT_DEVICE_MMC2
-                0x00000000402fcc60        0xc common/spl/built-in.o
-                0x00000000402fcc60                _u_boot_list_2_spl_image_loader_2_spl_mmc_load_image0BOOT_DEVICE_MMC2
+                0x00000000402fcbe8        0xc common/spl/built-in.o
+                0x00000000402fcbe8                _u_boot_list_2_spl_image_loader_2_spl_mmc_load_image0BOOT_DEVICE_MMC2
  .u_boot_list_2_spl_image_loader_2_spl_mmc_load_image0BOOT_DEVICE_MMC2_2
-                0x00000000402fcc6c        0xc common/spl/built-in.o
-                0x00000000402fcc6c                _u_boot_list_2_spl_image_loader_2_spl_mmc_load_image0BOOT_DEVICE_MMC2_2
+                0x00000000402fcbf4        0xc common/spl/built-in.o
+                0x00000000402fcbf4                _u_boot_list_2_spl_image_loader_2_spl_mmc_load_image0BOOT_DEVICE_MMC2_2
  .u_boot_list_2_spl_image_loader_2_spl_nand_load_image1BOOT_DEVICE_NAND
-                0x00000000402fcc78        0xc common/spl/built-in.o
-                0x00000000402fcc78                _u_boot_list_2_spl_image_loader_2_spl_nand_load_image1BOOT_DEVICE_NAND
+                0x00000000402fcc00        0xc common/spl/built-in.o
+                0x00000000402fcc00                _u_boot_list_2_spl_image_loader_2_spl_nand_load_image1BOOT_DEVICE_NAND
  .u_boot_list_2_spl_image_loader_2_spl_ymodem_load_image0BOOT_DEVICE_UART
-                0x00000000402fcc84        0xc common/spl/built-in.o
-                0x00000000402fcc84                _u_boot_list_2_spl_image_loader_2_spl_ymodem_load_image0BOOT_DEVICE_UART
+                0x00000000402fcc0c        0xc common/spl/built-in.o
+                0x00000000402fcc0c                _u_boot_list_2_spl_image_loader_2_spl_ymodem_load_image0BOOT_DEVICE_UART
  .u_boot_list_2_spl_image_loader_3
-                0x00000000402fcc90        0x0 common/spl/built-in.o
-                0x00000000402fcc90                . = ALIGN (0x4)
-                0x00000000402fcc90                __image_copy_end = .
+                0x00000000402fcc18        0x0 common/spl/built-in.o
+                0x00000000402fcc18                . = ALIGN (0x4)
+                0x00000000402fcc18                __image_copy_end = .
 
 .end
  *(.__end)
-                0x00000000402fcc90                _image_binary_end = .
+                0x00000000402fcc18                _image_binary_end = .
 
 .bss            0x0000000080a00000    0x11f3c
                 0x0000000080a00000                . = ALIGN (0x4)
@@ -3312,7 +3254,7 @@ OUTPUT(u-boot-spl elf32-littlearm)
  .note.GNU-stack
                 0x0000000000000000        0x0 arch/arm/lib/lib.a(div0.o)
 
-.debug_line     0x0000000000000000    0x1678c
+.debug_line     0x0000000000000000    0x165b7
  .debug_line    0x0000000000000000       0x8c arch/arm/cpu/armv7/start.o
  .debug_line    0x000000000000008c     0x276d arch/arm/mach-omap2/built-in.o
  .debug_line    0x00000000000027f9      0x742 arch/arm/cpu/armv7/built-in.o
@@ -3324,12 +3266,12 @@ OUTPUT(u-boot-spl elf32-littlearm)
  .debug_line    0x0000000000007f5d      0x4ac env/built-in.o
  .debug_line    0x0000000000008409     0x34f6 lib/built-in.o
  .debug_line    0x000000000000b8ff     0x14e8 disk/built-in.o
- .debug_line    0x000000000000cde7     0x6576 drivers/built-in.o
- .debug_line    0x000000000001335d     0x32f4 fs/built-in.o
- .debug_line    0x0000000000016651       0xf4 arch/arm/lib/lib.a(lib1funcs.o)
- .debug_line    0x0000000000016745       0x47 arch/arm/lib/lib.a(div0.o)
+ .debug_line    0x000000000000cde7     0x63a1 drivers/built-in.o
+ .debug_line    0x0000000000013188     0x32f4 fs/built-in.o
+ .debug_line    0x000000000001647c       0xf4 arch/arm/lib/lib.a(lib1funcs.o)
+ .debug_line    0x0000000000016570       0x47 arch/arm/lib/lib.a(div0.o)
 
-.debug_info     0x0000000000000000    0xb6ac6
+.debug_info     0x0000000000000000    0xb627d
  .debug_info    0x0000000000000000       0x69 arch/arm/cpu/armv7/start.o
  .debug_info    0x0000000000000069    0x22c9f arch/arm/mach-omap2/built-in.o
  .debug_info    0x0000000000022d08     0x30ac arch/arm/cpu/armv7/built-in.o
@@ -3341,12 +3283,12 @@ OUTPUT(u-boot-spl elf32-littlearm)
  .debug_info    0x000000000004da8e     0x294d env/built-in.o
  .debug_info    0x00000000000503db    0x133a5 lib/built-in.o
  .debug_info    0x0000000000063780     0x939b disk/built-in.o
- .debug_info    0x000000000006cb1b    0x33099 drivers/built-in.o
- .debug_info    0x000000000009fbb4    0x16e58 fs/built-in.o
- .debug_info    0x00000000000b6a0c       0x63 arch/arm/lib/lib.a(lib1funcs.o)
- .debug_info    0x00000000000b6a6f       0x57 arch/arm/lib/lib.a(div0.o)
+ .debug_info    0x000000000006cb1b    0x32850 drivers/built-in.o
+ .debug_info    0x000000000009f36b    0x16e58 fs/built-in.o
+ .debug_info    0x00000000000b61c3       0x63 arch/arm/lib/lib.a(lib1funcs.o)
+ .debug_info    0x00000000000b6226       0x57 arch/arm/lib/lib.a(div0.o)
 
-.debug_abbrev   0x0000000000000000    0x16510
+.debug_abbrev   0x0000000000000000    0x1651f
  .debug_abbrev  0x0000000000000000       0x14 arch/arm/cpu/armv7/start.o
  .debug_abbrev  0x0000000000000014     0x329c arch/arm/mach-omap2/built-in.o
  .debug_abbrev  0x00000000000032b0      0x9a3 arch/arm/cpu/armv7/built-in.o
@@ -3358,12 +3300,12 @@ OUTPUT(u-boot-spl elf32-littlearm)
  .debug_abbrev  0x00000000000096eb      0x67d env/built-in.o
  .debug_abbrev  0x0000000000009d68     0x39e1 lib/built-in.o
  .debug_abbrev  0x000000000000d749     0x1401 disk/built-in.o
- .debug_abbrev  0x000000000000eb4a     0x56d8 drivers/built-in.o
- .debug_abbrev  0x0000000000014222     0x227e fs/built-in.o
- .debug_abbrev  0x00000000000164a0       0x12 arch/arm/lib/lib.a(lib1funcs.o)
- .debug_abbrev  0x00000000000164b2       0x5e arch/arm/lib/lib.a(div0.o)
+ .debug_abbrev  0x000000000000eb4a     0x56e7 drivers/built-in.o
+ .debug_abbrev  0x0000000000014231     0x227e fs/built-in.o
+ .debug_abbrev  0x00000000000164af       0x12 arch/arm/lib/lib.a(lib1funcs.o)
+ .debug_abbrev  0x00000000000164c1       0x5e arch/arm/lib/lib.a(div0.o)
 
-.debug_aranges  0x0000000000000000     0x2828
+.debug_aranges  0x0000000000000000     0x2760
  .debug_aranges
                 0x0000000000000000       0x20 arch/arm/cpu/armv7/start.o
  .debug_aranges
@@ -3387,15 +3329,15 @@ OUTPUT(u-boot-spl elf32-littlearm)
  .debug_aranges
                 0x0000000000001618      0x1a8 disk/built-in.o
  .debug_aranges
-                0x00000000000017c0      0xc20 drivers/built-in.o
+                0x00000000000017c0      0xb58 drivers/built-in.o
  .debug_aranges
-                0x00000000000023e0      0x3e0 fs/built-in.o
+                0x0000000000002318      0x3e0 fs/built-in.o
  .debug_aranges
-                0x00000000000027c0       0x48 arch/arm/lib/lib.a(lib1funcs.o)
+                0x00000000000026f8       0x48 arch/arm/lib/lib.a(lib1funcs.o)
  .debug_aranges
-                0x0000000000002808       0x20 arch/arm/lib/lib.a(div0.o)
+                0x0000000000002740       0x20 arch/arm/lib/lib.a(div0.o)
 
-.debug_frame    0x0000000000000000     0x6d6c
+.debug_frame    0x0000000000000000     0x6ba0
  .debug_frame   0x0000000000000000      0x7f0 arch/arm/mach-omap2/built-in.o
  .debug_frame   0x00000000000007f0      0x1ec arch/arm/cpu/armv7/built-in.o
  .debug_frame   0x00000000000009dc      0x3a8 arch/arm/lib/built-in.o
@@ -3406,11 +3348,11 @@ OUTPUT(u-boot-spl elf32-littlearm)
  .debug_frame   0x0000000000001e1c      0x16c env/built-in.o
  .debug_frame   0x0000000000001f88     0x11a0 lib/built-in.o
  .debug_frame   0x0000000000003128      0x64c disk/built-in.o
- .debug_frame   0x0000000000003774     0x27d0 drivers/built-in.o
- .debug_frame   0x0000000000005f44      0xe08 fs/built-in.o
- .debug_frame   0x0000000000006d4c       0x20 arch/arm/lib/lib.a(div0.o)
+ .debug_frame   0x0000000000003774     0x2604 drivers/built-in.o
+ .debug_frame   0x0000000000005d78      0xe08 fs/built-in.o
+ .debug_frame   0x0000000000006b80       0x20 arch/arm/lib/lib.a(div0.o)
 
-.debug_str      0x0000000000000000    0x12256
+.debug_str      0x0000000000000000    0x120fe
  .debug_str     0x0000000000000000     0x6514 arch/arm/mach-omap2/built-in.o
                                       0x24bdd (size before relaxing)
  .debug_str     0x0000000000006514      0x34b arch/arm/cpu/armv7/built-in.o
@@ -3431,14 +3373,14 @@ OUTPUT(u-boot-spl elf32-littlearm)
                                        0xde5c (size before relaxing)
  .debug_str     0x000000000000b7f7      0xc51 disk/built-in.o
                                        0x53ab (size before relaxing)
- .debug_str     0x000000000000c448     0x420e drivers/built-in.o
-                                      0x1c3d1 (size before relaxing)
- .debug_str     0x0000000000010656     0x1be2 fs/built-in.o
+ .debug_str     0x000000000000c448     0x40b6 drivers/built-in.o
+                                      0x1c279 (size before relaxing)
+ .debug_str     0x00000000000104fe     0x1be2 fs/built-in.o
                                        0xb569 (size before relaxing)
- .debug_str     0x0000000000012238       0x1e arch/arm/lib/lib.a(div0.o)
+ .debug_str     0x00000000000120e0       0x1e arch/arm/lib/lib.a(div0.o)
                                         0x1a1 (size before relaxing)
 
-.debug_loc      0x0000000000000000    0x421da
+.debug_loc      0x0000000000000000    0x41f54
  .debug_loc     0x0000000000000000     0x2438 arch/arm/mach-omap2/built-in.o
  .debug_loc     0x0000000000002438      0x43a arch/arm/cpu/armv7/built-in.o
  .debug_loc     0x0000000000002872      0x95f arch/arm/lib/built-in.o
@@ -3449,10 +3391,10 @@ OUTPUT(u-boot-spl elf32-littlearm)
  .debug_loc     0x0000000000009ec1      0x360 env/built-in.o
  .debug_loc     0x000000000000a221    0x14029 lib/built-in.o
  .debug_loc     0x000000000001e24a     0x317e disk/built-in.o
- .debug_loc     0x00000000000213c8    0x14479 drivers/built-in.o
- .debug_loc     0x0000000000035841     0xc999 fs/built-in.o
+ .debug_loc     0x00000000000213c8    0x141f3 drivers/built-in.o
+ .debug_loc     0x00000000000355bb     0xc999 fs/built-in.o
 
-.debug_ranges   0x0000000000000000     0x5bb0
+.debug_ranges   0x0000000000000000     0x5b18
  .debug_ranges  0x0000000000000000      0x658 arch/arm/mach-omap2/built-in.o
  .debug_ranges  0x0000000000000658      0x128 arch/arm/cpu/armv7/built-in.o
  .debug_ranges  0x0000000000000780      0x238 arch/arm/lib/built-in.o
@@ -3463,7 +3405,7 @@ OUTPUT(u-boot-spl elf32-littlearm)
  .debug_ranges  0x00000000000013b0       0x88 env/built-in.o
  .debug_ranges  0x0000000000001438      0xaf8 lib/built-in.o
  .debug_ranges  0x0000000000001f30      0x768 disk/built-in.o
- .debug_ranges  0x0000000000002698     0x2260 drivers/built-in.o
- .debug_ranges  0x00000000000048f8     0x1268 fs/built-in.o
- .debug_ranges  0x0000000000005b60       0x40 arch/arm/lib/lib.a(lib1funcs.o)
- .debug_ranges  0x0000000000005ba0       0x10 arch/arm/lib/lib.a(div0.o)
+ .debug_ranges  0x0000000000002698     0x21c8 drivers/built-in.o
+ .debug_ranges  0x0000000000004860     0x1268 fs/built-in.o
+ .debug_ranges  0x0000000000005ac8       0x40 arch/arm/lib/lib.a(lib1funcs.o)
+ .debug_ranges  0x0000000000005b08       0x10 arch/arm/lib/lib.a(div0.o)
